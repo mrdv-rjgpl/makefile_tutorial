@@ -11,7 +11,7 @@ all: add_two_numbers.exe subtract_two_numbers.exe
 
 #
 # In the previous examples, we observed that the recipes for 'add_two_numbers.exe' and 'subtract_two_numbers.exe' were
-# identical, with the exception of the file names involved. The make system allows us to create a single recipe to
+# identical, with the exception of the file names involved. The make system allows us to create a single recipe
 # for file pairs matching a given pattern, as below. This recipe is used for any file ending in '.exe', with a
 # corresponding pre-requisite of the same file name (as given by '%'), with the file extension '.cpp'.
 #
