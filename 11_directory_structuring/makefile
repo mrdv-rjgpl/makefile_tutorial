@@ -34,9 +34,7 @@ exe_file_names = $(patsubst $(src_dir)%.cpp, $(bin_dir)%.exe, $(cpp_file_names))
 lst_file_names = $(patsubst $(src_dir)%.cpp, $(bin_dir)%.lst, $(cpp_file_names))
 
 #
-# The recipe for all has the variable lst_file_names added to it. Note that the executable files remain a dependency,
-# as removing them would cause the generated executable files to be treated as an intermediate target, and removed at
-# the end of the compilation.
+# The recipe for all remains the same as before.
 #
 all: $(exe_file_names) $(lst_file_names)
 
@@ -61,7 +59,7 @@ $(build_dir)%.o: $(src_dir)%.cpp
 	g++ -c -o $(@) $(<)
 
 #
-# The clean recipe now includes the listing files.
+# The clean recipe remains the same as before.
 #
 clean:
 	rm $(exe_file_names) $(lst_file_names)
