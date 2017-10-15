@@ -67,6 +67,12 @@ $(makefile_dep):
 	echo "# WARNING: This file is auto-generated! Do not edit unless you know what you are doing!" >> $(@)
 
 #
+# The auto-generated makefile dependency list is now included in the makefile, in a manner similar to the '#include'
+# directive in C/C++.
+#
+-include $(makefile_dep)
+
+#
 # The clean recipe now has the makefile_dep variable added to it.
 #
 clean:
