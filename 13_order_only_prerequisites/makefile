@@ -17,12 +17,11 @@
 #
 
 #
-# A variable dir_sep is created, to simplify the multiple references to the directory separation character, for cross
-# OS compatibility down the line.
+# The variable dir_sep remains the same as before.
 #
 dir_sep = /
 #
-# The variables for the directory names now refer to the dir_sep variable, for simplicity.
+# The variables for the directory names remain the same as before.
 #
 bin_dir   = bin$(dir_sep)
 build_dir = build$(dir_sep)
@@ -46,7 +45,7 @@ lst_file_names = $(patsubst $(src_dir)%.cpp, $(bin_dir)%.lst, $(cpp_file_names))
 all: $(exe_file_names) $(lst_file_names)
 
 #
-# The for directory creation remains the same as before.
+# The recipe for directory creation remains the same as before.
 #
 %$(dir_sep):
 	mkdir $(@)
