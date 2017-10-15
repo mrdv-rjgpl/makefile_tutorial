@@ -33,3 +33,6 @@
 
 # Listing files
 *.lst
+
+# Makefile dependency files
+*.dep
