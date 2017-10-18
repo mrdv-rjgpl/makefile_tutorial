@@ -86,7 +86,7 @@ $(makefile_dep):
 	echo "# WARNING: This file is auto-generated! Do not edit unless you know what you are doing!" >> $(@)
 	echo "" >> $(@)
 	for x in $(src_file_names) $(main_file_names); \
-		do g++ -MT `echo $$x | sed -e "s.$(src_dir).$(build_dir)." -e "s/\.cpp/\.o/"` -MM $$x >> $(@); \
+		do g++ -MT `echo $$x | sed -e "s.$(src_dir).$(build_dir)." -e "s.$(main_dir).$(build_dir)." -e "s/\.cpp/\.o/"` -MM $$x >> $(@); \
 		echo "" >> $(@); \
 	done
 
