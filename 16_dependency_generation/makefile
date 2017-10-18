@@ -93,7 +93,7 @@ $(makefile_dep):
 -include $(makefile_dep)
 
 #
-# The clean recipe now has the makefile_dep variable added to it.
+# The clean recipe remains the same.
 #
 clean:
 	rm -rf $(bin_dir) $(build_dir) $(makefile_dep)
