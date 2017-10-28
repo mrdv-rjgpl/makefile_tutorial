@@ -15,7 +15,6 @@ main_dir  = main$(dir_sep)
 src_dir   = src$(dir_sep)
 test_dir  = test$(dir_sep)
 
-
 src_file_names  = $(wildcard $(src_dir)*.cpp)
 main_file_names = $(wildcard $(main_dir)*.cpp)
 test_file_names = $(wildcard $(test_dir)*.cpp)
@@ -32,7 +31,7 @@ ifeq ($(filter run,$(MAKECMDGOALS)),run)
 	make_type = run
 endif # MAKECMDGOALS
 
-makefile_dep=makefile_$(make_type).dep
+makefile_dep    = makefile_$(make_type).dep
 obj_file_names  = $(patsubst $(src_dir)%.cpp, $(build_dir)%_$(make_type).o, $(src_file_names))
 exe_file_names := $(patsubst $(main_dir)%.cpp, $(bin_dir)%_$(make_type).exe, $(main_file_names))
 exe_file_names := $(patsubst $(test_dir)%.cpp, $(bin_dir)%_$(make_type).exe, $(test_file_names)) $(exe_file_names)

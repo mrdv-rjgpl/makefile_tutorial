@@ -14,7 +14,7 @@ main_dir  = main$(dir_sep)
 src_dir   = src$(dir_sep)
 test_dir  = test$(dir_sep)
 
-makefile_dep=makefile.dep
+makefile_dep = makefile.dep
 
 src_file_names  = $(wildcard $(src_dir)*.cpp)
 obj_file_names  = $(patsubst $(src_dir)%.cpp, $(build_dir)%.o, $(src_file_names))
