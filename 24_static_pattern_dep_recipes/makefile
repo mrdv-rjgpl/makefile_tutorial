@@ -62,7 +62,8 @@ $(build_dir)%.o: | $(build_dir)
 
 #
 # The recipe for makefile dependency lists is modified to be solely dependent on the pattern in the makefile. This is
-# the first step towards allowing multiple make targets to be compiled at the same time.
+# the first step towards allowing multiple make targets to be compiled at the same time. This is accomplished with the
+# help of the automatic variable $(*), which is used to match the '%' in the target of the recipe.
 #
 $(make_dir)makefile_%.dep: | $(make_dir)
 	> $(@)
