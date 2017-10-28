@@ -74,10 +74,6 @@ $(bin_dir)%.exe: $(build_dir)%.o $(patsubst %.o,%_$(make_type).o,$(obj_file_name
 $(build_dir)%.o: | $(build_dir)
 	g++ $(cdflags) $(cwflags) -c -o $(@) $(<)
 
-#
-# The recipe for makefile dependency lists is modified to be solely dependent on the pattern in the makefile. This is
-# the first step towards allowing multiple make targets to be compiled at the same time.
-#
 $(make_dir)makefile_%.dep: | $(make_dir)
 	> $(@)
 	echo "# WARNING: This file is auto-generated! Do not edit unless you know what you are doing!" >> $(@)
