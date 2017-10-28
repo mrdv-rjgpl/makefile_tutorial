@@ -68,7 +68,8 @@ $(makefile_dep):
 
 #
 # The auto-generated makefile dependency list is now included in the makefile, in a manner similar to the '#include'
-# directive in C/C++.
+# directive in C/C++. The actual command is `include $(makefile_dep)`, with a '-' added at the beginning to allow make
+# to continue without crashing in the event that makefile_dep is not found.
 #
 -include $(makefile_dep)
 
