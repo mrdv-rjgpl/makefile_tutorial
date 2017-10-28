@@ -36,3 +36,7 @@
 
 # Makefile dependency files
 *.dep
+
+# VIM swap files
+*.swo
+*.swp
